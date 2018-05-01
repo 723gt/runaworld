@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    runaworld (0.1.1)
+    runaworld (0.1.2)
       nokogiri
       thor
 
