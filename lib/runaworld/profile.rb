@@ -2,7 +2,7 @@ require "json"
 
 module Runaworld
   class Profile
-    PROFILE_JSON = "config/profile.json"
+    PROFILE_JSON = "#{File.dirname(__FILE__)}/../../config/profile.json"
     def self.print_profile
       profile = File.open(PROFILE_JSON) do |f|
         JSON.load(f)

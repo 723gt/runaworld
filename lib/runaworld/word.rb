@@ -1,7 +1,7 @@
 require "json"
 module Runaworld
   class Word
-    WORD_JSON = "config/word.json"
+    WORD_JSON = "#{File.dirname(__FILE__)}/../../config/word.json"
     def self.print_random_word
       words = read_file
       puts words["word"].sample
