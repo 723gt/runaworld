@@ -1,7 +1,9 @@
 PATH
   remote: .
   specs:
-    runaworld (0.1.0)
+    runaworld (0.1.1)
+      nokogiri
+      thor
 
 GEM
   remote: https://rubygems.org/
