@@ -1,28 +1,54 @@
 # Runaworld
+おはよおおおおお    
+こんちはああああ  
+こんばんわああああ  
+おやすみいいいいい  
+おぎでええええええ  
+輝夜月だよぉぉぉぉぉぉぉ  
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/runaworld`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+月ちゃんの事がわかるRuby Gemだよおおお  
+知らんけど!!!!!    
 
 ## Installation
 
+この行をGemfileに書いてみるでござる！！！  
 Add this line to your application's Gemfile:
 
 ```ruby
 gem 'runaworld'
 ```
 
+そしたら次これ実行!!!  
 And then execute:
 
     $ bundle
 
+それかコレインストール出来る、知らんけど！！！   
 Or install it yourself as:
 
     $ gem install runaworld
 
 ## Usage
+コマンドで色々出来るよ卍〜  
+**月ちゃんの事をしりたい?**  
+```
+$ runaworld profile  
+```  
+**月ちゃんの発言をしりたい?**  
+```
+$ runaworld word all #登録されてる語録が全部見れる...!!!  
+$ runaworld word #ランダムで1つ表示されるよ!!  
+```  
 
-TODO: Write usage instructions here
+**月ちゃんの動画一覧を見たい??**  
+```
+$ runaworld move_list  
+```  
+
+***月ちゃんの動画を1つだけ表示したい？？？**  
+```
+$ runaworld move [NO]
+```  
 
 ## Development
 
