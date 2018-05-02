@@ -13,20 +13,46 @@ module Runaworld
       end
 
       def get_move(in_no)
-        move_no = in_no - 1
-        move_list = scraping_channel
-        move = move_list[move_no] 
-        print_info(move_no, move[:title], move[:link])
+        move = get_move_array(in_no)
+        begin
+          print_info(in_no - 1 , move[:title], move[:link])
+        rescue => e
+          print_error
+        end
       end
 
       def get_move_url(in_no)
-        move_no = in_no -1
+        move = get_move_array(in_no)
+        begin 
+          puts "https://www.youtube.com#{move[:link]}"
+        rescue => e
+          print_error
+        end
+      end
+
+      def get_move_title(in_no)
+        move = get_move_array(in_no)
+        begin
+          puts "#{move[:title]}"
+        rescue => e
+          print_error
+        end
+      end
+
+      def get_move_latest
         move_list = scraping_channel
-        move = move_list[move_no]
-        puts "url:https://www.youtube.com#{move[:link]}"
+        move_no = move_list.length - 1
+        move_latest = move_list.last
+        print_info(move_no, move_latest[:title], move_latest[:link])
       end
 
       private
+      def get_move_array(in_no)
+        move_no = in_no - 1
+        move_list = scraping_channel
+        return move_list[move_no]
+      end
+
       def scraping_channel
         charset = nil
 
@@ -48,6 +74,10 @@ module Runaworld
         puts "No.#{no + 1}"
         puts "タイトル: #{title}"
         puts "url:https://www.youtube.com#{link}"
+      end
+
+      def print_error
+        STDERR.puts "それエラーやないかーい"
       end
     end
   end

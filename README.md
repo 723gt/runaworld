@@ -23,7 +23,7 @@ And then execute:
 
     $ bundle
 
-それかコレインストール出来る、知らんけど！！！   
+それかコレでインストール出来る、知らんけど！！！   
 Or install it yourself as:
 
     $ gem install runaworld
@@ -42,13 +42,29 @@ $ runaworld word #ランダムで1つ表示されるよ!!
 
 **月ちゃんの動画一覧を見たい??**  
 ```
-$ runaworld move_list  
+$ runaworld move list  
 ```  
 
-***月ちゃんの動画を1つだけ表示したい？？？**  
+**月ちゃんの動画を1つだけ表示したい？？？**  
 ```
 $ runaworld move [NO]
-```  
+```   
+
+**月ちゃんの動画のタイトルだけ表示したい???**
+```
+$ runaworld move title [NO]
+```
+
+**月ちゃんの動画のURLだけ表示したい???**
+```
+$ runaworld move url [NO]
+```   
+
+**月ちゃんの最新の動画を調べられるよ!!**  
+``` 
+$ runaworld move latest
+```
+
 
 ## Development
 

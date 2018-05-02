@@ -1,4 +1,5 @@
 require 'thor'
+
 module Runaworld
   class  Cli < Thor
     desc "profile", "print profile of kaguya runa"
@@ -23,10 +24,23 @@ module Runaworld
       Runaworld::Move.get_move_list
     end
 
-    desc "move [NO]", "print each move info"
-    def move(no = 1)
-      Runaworld::Move.get_move(no.to_i)
+    desc "move ['title' or 'url' or 'list' or 'latest' or  NO] [NO]", "print each move info,is title and URL"
+    def move(mode = 1, no = 1)
+      case mode
+      when /^[0-9]+$/
+        no = mode
+        Runaworld::Move.get_move(no.to_i)
+      when 'url'
+        Runaworld::Move.get_move_url(no.to_i)
+      when 'title'
+        Runaworld::Move.get_move_title(no.to_i)
+      when 'list'
+        Runaworld::Move.get_move_list
+      when 'latest'
+        Runaworld::Move.get_move_latest
+      else
+        Runaworld::Move.get_move_list
+      end
     end
   end
 end
-
