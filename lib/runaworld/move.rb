@@ -8,7 +8,7 @@ module Runaworld
       def get_move_list
         move_list = scraping_channel
         move_list.each_with_index do |m,i|
-          print_info(i + 1, m[:title], m[:link])
+          print_info(i, m[:title], m[:link])
         end
       end
 
@@ -17,6 +17,13 @@ module Runaworld
         move_list = scraping_channel
         move = move_list[move_no] 
         print_info(move_no, move[:title], move[:link])
+      end
+
+      def get_move_url(in_no)
+        move_no = in_no -1
+        move_list = scraping_channel
+        move = move_list[move_no]
+        puts "url:https://www.youtube.com#{move[:link]}"
       end
 
       private
@@ -40,7 +47,7 @@ module Runaworld
       def print_info(no, title, link)
         puts "No.#{no + 1}"
         puts "タイトル: #{title}"
-        puts "URL:https://www.youtube.com/#{link}"
+        puts "url:https://www.youtube.com#{link}"
       end
     end
   end
